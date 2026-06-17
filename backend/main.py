@@ -93,9 +93,9 @@ def login(user: LoginUser, db: Session = Depends(get_db)):
     if user.password != db_user.password:
         raise HTTPException(status_code=400, detail="Wrong password")
 
-    token = create_access_token({"sub": db_user.email})
+        token = create_access_token({"sub": db_user.email})
 
-return {
-    "access_token": token,
-    "token_type": "bearer"
-}
+        return {
+        "access_token": token,
+        "token_type": "bearer"
+    }
