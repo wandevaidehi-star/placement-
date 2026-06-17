@@ -1,0 +1,293 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+}
+
+/* ===================== NAVBAR ===================== */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:#4f46e5;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-size:30px;
+    color:#fff;
+    font-weight:700;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+.nav-links li{
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#ffd700;
+}
+
+/* ===================== HERO ===================== */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 8%;
+    min-height:90vh;
+    background:linear-gradient(to right,#eef2ff,#ffffff);
+}
+
+.hero-content{
+    width:50%;
+}
+
+.hero-content h1{
+    font-size:55px;
+    margin-bottom:20px;
+    color:#222;
+}
+
+.hero-content p{
+    font-size:18px;
+    line-height:1.8;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#4f46e5;
+    color:white;
+    padding:15px 35px;
+    text-decoration:none;
+    border-radius:50px;
+    font-size:18px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#312e81;
+}
+
+.hero-image{
+    width:45%;
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+/* ===================== SECTION ===================== */
+
+section{
+    padding:80px 8%;
+}
+
+section h2{
+    text-align:center;
+    font-size:40px;
+    color:#4f46e5;
+    margin-bottom:50px;
+}
+
+/* ===================== CARDS ===================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#4f46e5;
+    margin-bottom:15px;
+    font-size:25px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.7;
+}
+
+/* ===================== STATS ===================== */
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    background:#4f46e5;
+    flex-wrap:wrap;
+}
+
+.stat{
+    text-align:center;
+    color:white;
+    padding:40px;
+}
+
+.stat h2{
+    color:white;
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.stat p{
+    font-size:18px;
+}
+
+/* ===================== TESTIMONIAL ===================== */
+
+.testimonials{
+    background:#f8fafc;
+}
+
+.testimonials .card{
+    border-left:5px solid #4f46e5;
+}
+
+.testimonials h4{
+    margin-top:20px;
+    color:#4f46e5;
+}
+
+/* ===================== CONTACT ===================== */
+
+.contact{
+    background:#eef2ff;
+}
+
+.contact form{
+    width:70%;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:15px;
+    margin:15px 0;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.contact textarea{
+    height:160px;
+    resize:none;
+}
+
+.contact button{
+    width:100%;
+    padding:15px;
+    background:#4f46e5;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact button:hover{
+    background:#312e81;
+}
+
+/* ===================== FOOTER ===================== */
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:16px;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media(max-width:900px){
+
+.navbar{
+    flex-direction:column;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:15px;
+}
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-content{
+    width:100%;
+}
+
+.hero-image{
+    width:100%;
+    margin-top:40px;
+}
+
+.hero-content h1{
+    font-size:38px;
+}
+
+.contact form{
+    width:95%;
+}
+
+.stats{
+    flex-direction:column;
+}
+}
